@@ -1,11 +1,19 @@
 {
-  "Source": "himawari",
-  "HimawariLevel": 4,
-  "GoesSatellite": "GOES19",
-  "MarginPercent": 4,
-  "AvoidTaskbar": true,
-  "NightLights": true,
-  "NightLightsBrightness": 1.5,
-  "BackgroundColor": "#000000",
-  "ShowTimestamp": true
+    "Source":  "gk2a",
+    "DetailLevel":  3,
+    "MarginPercent":  5,
+    "AvoidTaskbar":  true,
+    "NightBoost":  1.2,
+    "BackgroundColor":  "#000000",
+    "ShowTimestamp":  false,
+    "CityCentering":  true,
+    "CenterCity":  "Taipei",
+    "CenterLat":  25.033,
+    "CenterLon":  121.5654,
+    "CityZoomPercent":  100,
+    "AnimationEnabled":  true,
+    "AnimationStepMinutes":  30,
+    "AnimationHours":  3,
+    "AnimationIntervalSec":  1,
+    "AnimationBackfillPerRun":  12
 }
