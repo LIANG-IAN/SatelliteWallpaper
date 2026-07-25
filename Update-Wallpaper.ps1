@@ -233,7 +233,15 @@ try {
     # 預設只允許 2 條並行連線，圖磚是逐塊下載的，放寬可明顯縮短整批時間
     [Net.ServicePointManager]::DefaultConnectionLimit = 8
 
-    $Config = Get-Content (Join-Path $ScriptDir 'config.json') -Raw | ConvertFrom-Json
+    # config.json 屬個人設定、不進版控（見 .gitignore），首次執行時由範本複製一份
+    $ConfigFile = Join-Path $ScriptDir 'config.json'
+    if (-not (Test-Path $ConfigFile)) {
+        $ExampleFile = Join-Path $ScriptDir 'config.example.json'
+        if (-not (Test-Path $ExampleFile)) { throw "找不到 config.json，也找不到範本 $ExampleFile" }
+        Copy-Item $ExampleFile $ConfigFile
+        Write-Log '首次執行：已依 config.example.json 建立 config.json'
+    }
+    $Config = Get-Content $ConfigFile -Raw | ConvertFrom-Json
 
     Add-Type -AssemblyName System.Drawing
     Add-Type -AssemblyName System.Windows.Forms

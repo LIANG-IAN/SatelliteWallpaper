@@ -1,0 +1,7 @@
+# 個人設定：首次執行 Update-Wallpaper.ps1 或開啟 Settings.ps1 時，
+# 會自動從 config.example.json 複製產生。調整設定不會再動到版控。
+config.json
+
+# Windows 檔案總管殘留
+Thumbs.db
+desktop.ini

@@ -1,0 +1,19 @@
+{
+    "Source":  "gk2a",
+    "DetailLevel":  2,
+    "MarginPercent":  4,
+    "AvoidTaskbar":  true,
+    "NightBoost":  1.5,
+    "BackgroundColor":  "#000000",
+    "ShowTimestamp":  true,
+    "CityCentering":  false,
+    "CenterCity":  "Taipei",
+    "CenterLat":  25.033,
+    "CenterLon":  121.5654,
+    "CityZoomPercent":  50,
+    "AnimationEnabled":  false,
+    "AnimationStepMinutes":  20,
+    "AnimationHours":  8,
+    "AnimationIntervalSec":  3,
+    "AnimationBackfillPerRun":  12
+}

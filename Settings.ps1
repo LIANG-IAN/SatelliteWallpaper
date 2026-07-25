@@ -35,8 +35,12 @@ $Defaults = [ordered]@{
     CityCentering = $false; CenterCity = 'Taipei'; CenterLat = 25.033; CenterLon = 121.5654
     CityZoomPercent = 50
     AnimationEnabled = $false; AnimationStepMinutes = 20; AnimationHours = 8
-    AnimationIntervalSec = 2; AnimationBackfillPerRun = 12
+    AnimationIntervalSec = 3; AnimationBackfillPerRun = 12
 }
+# config.json 屬個人設定、不進版控（見 .gitignore），首次開啟時由範本複製一份
+$ExampleFile = Join-Path $ScriptDir 'config.example.json'
+if (-not (Test-Path $ConfigFile) -and (Test-Path $ExampleFile)) { Copy-Item $ExampleFile $ConfigFile }
+
 $Cfg = [ordered]@{}
 $Raw = $null
 if (Test-Path $ConfigFile) { $Raw = Get-Content $ConfigFile -Raw | ConvertFrom-Json }

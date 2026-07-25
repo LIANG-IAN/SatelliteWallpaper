@@ -52,6 +52,10 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\Update-Wallpaper.ps1
 
 ## 設定 (config.json)
 
+`config.json` 是**個人設定、不進版控**（列在 `.gitignore`）。倉庫裡只放範本 `config.example.json`，首次執行 `Update-Wallpaper.ps1` 或開啟設定視窗時會自動複製一份，之後怎麼改都不會與 repo 衝突。
+
+範本的預設值刻意保守：全圓盤、動態桌布關閉，不會一裝好就開始大量下載。
+
 | 欄位 | 說明 |
 |------|------|
 | `Source` | `gk2a` / `himawari` / `goes19` / `goes18` |
