@@ -4,6 +4,7 @@
 
 類似 EarthDesk 的個人小工具：定時把 Windows 桌布換成最新的衛星雲圖全圓盤影像。純 PowerShell + 內嵌 C#，無任何外部相依。
 
+![白天效果](docs/Snipaste_2026-07-25_09-53-23.png)
 ![夜面城市燈光效果](docs/screenshot.jpg)
 *實際桌布輸出：Himawari-9 夜面疊上 NASA Black Marble 城市燈光*
 
